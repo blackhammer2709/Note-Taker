@@ -4,7 +4,7 @@ const sequelize = new Sequelize("NoteTaker", "postgres", "2709", {
 	host: "localhost",
 	dialect: "postgres",
 });
-
+//process.env.url
 /*const connectDB = () => {
 	try {
 		return new Sequelize("NoteTaker", "postgres", "2709", {
