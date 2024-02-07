@@ -1,9 +1,13 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize("NoteTaker", "postgres", "2709", {
-	host: "localhost",
+const sequelize = new Sequelize({
 	dialect: "postgres",
+	host: process.env.HOST || "localhost",
+	database: process.env.DB || "NoteTaker",
+	username: process.env.USER || "postgres",
+	password: process.env.PS || "2709",
 });
+
 //process.env.url
 /*const connectDB = () => {
 	try {
