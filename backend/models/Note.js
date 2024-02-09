@@ -19,5 +19,6 @@ const Notes = sequelize.define("Notes", {
 		defaultValue: true,
 	},
 });
+
 Notes.sync();
 module.exports = Notes;
