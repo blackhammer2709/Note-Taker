@@ -26,7 +26,7 @@ Notes.belongsTo(Tags, {
 	targetId: "id",
 });
 Tags.sync();
-Notes.sync({ force: true });
+Notes.sync();
 
 module.exports = Tags;
 const tags = [
