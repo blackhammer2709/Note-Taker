@@ -1,13 +1,20 @@
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize({
-	dialect: "postgres",
-	host: process.env.HOST || "localhost",
-	database: process.env.DB || "NoteTaker",
-	username: process.env.USER || "postgres",
-	password: process.env.PS || "2709",
-});
-
+const sequelize = new Sequelize(
+	process.env.DB_URL ||
+		"postgres://testing:FIInMUWsUGA0deohfJ064feTqm3wWwDS@dpg-cn23vm2cn0vc738tb8a0-a.oregon-postgres.render.com/notetaker_6qzd?ssl=true",
+	{
+		pool: {
+			max: 10,
+			min: 0,
+			iddle: 100000,
+		},
+	}
+);
+//dpg-cn23vm2cn0vc738tb8a0-a
+//notetaker_6qzd
+//testing
+//FIInMUWsUGA0deohfJ064feTqm3wWwDS
 //process.env.url
 /*const connectDB = () => {
 	try {
