@@ -25,7 +25,7 @@ Notes.belongsTo(Tags, {
 	foreignKey: "tagId",
 	targetId: "id",
 });
-Tags.sync({ force: true });
+Tags.sync();
 
 module.exports = Tags;
 const tags = [

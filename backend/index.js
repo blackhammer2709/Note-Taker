@@ -25,7 +25,7 @@ async function main() {
 		//i try to make a M:N relationship but i run into to many problems
 		//app.use("/api/notestags", require("./routes/notestags"));
 
-		await sequelize.sync();
+		await sequelize.sync({ force: true });
 
 		//this app.listen only purpose is to check that the server is running
 		app.listen(PORT, () => {
