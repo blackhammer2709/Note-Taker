@@ -20,5 +20,4 @@ const Notes = sequelize.define("Notes", {
 	},
 });
 
-Notes.sync();
 module.exports = Notes;
